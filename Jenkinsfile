@@ -5,21 +5,21 @@ pipeline {
 		stage('-- CLEAN --') {
 			steps {
 				echo "Cleaning..."
-				bat mvn clean
+				bat "mvn clean"
 			}
 		}
 		
 		stage('-- TEST --') {
 			steps {
 				echo "Testing..."
-				bat mvn test
+				bat "mvn test"
 			}
 		}
 		
 		stage('-- BUILD --') {
 			steps {
 				echo "Building..."
-				bat mvn build
+				bat "mvn build"
 			}
 		}
 	}
