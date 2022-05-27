@@ -9,21 +9,21 @@ pipeline {
 		stage('-- CLEAN --') {
 			steps {
 				echo "Cleaning..."
-				bat "mvn clean"
+				sh "mvn clean"
 			}
 		}
 		
 		stage('-- TEST --') {
 			steps {
 				echo "Testing..."
-				bat "mvn test"
+				sh "mvn test"
 			}
 		}
 		
 		stage('-- BUILD --') {
 			steps {
 				echo "Building..."
-				bat "mvn package"
+				sh "mvn package"
 			}
 		}
 	}
